@@ -704,7 +704,7 @@ class AsyncCollection(common.BaseObject, Generic[_DocumentType]):
         bypass_document_validation: Optional[bool] = None,
         session: Optional[AsyncClientSession] = None,
         comment: Optional[Any] = None,
-        let: Optional[Mapping] = None,
+        let: Optional[Mapping[str, Any]] = None,
     ) -> BulkWriteResult:
         """Send a batch of write operations to the server.
 
