@@ -742,7 +742,7 @@ class AsyncClientSession:
         write_concern: Optional[WriteConcern] = None,
         read_preference: Optional[_ServerMode] = None,
         max_commit_time_ms: Optional[int] = None,
-    ) -> AsyncContextManager:
+    ) -> AsyncContextManager[_TransactionContext]:
         """Start a multi-statement transaction.
 
         Takes the same arguments as :class:`TransactionOptions`.
